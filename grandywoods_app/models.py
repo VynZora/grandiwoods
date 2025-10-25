@@ -34,26 +34,29 @@ class ClientReview(models.Model):
 
 
         
-# add Folders 
 class Folder(models.Model):
-    name = models.CharField(max_length=100,null=True,blank=True)
+    name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
+
 class Gallery(models.Model):
     folder = models.ForeignKey(Folder, related_name='galleries', on_delete=models.CASCADE)
-    # description = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.folder.name} - {self.description[:50]}"
+        return f"{self.folder.name}"
+
 
 class GalleryImage(models.Model):
     gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE, related_name='images')
     image = models.ImageField(upload_to='gallery_images/')
 
     def __str__(self):
-        return f"Image for {self.gallery.folder}"
+        return f"Image of {self.gallery.folder.name}"
+
+
+   
 
 
 
