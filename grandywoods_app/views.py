@@ -170,6 +170,7 @@ def update_near_by_place(request, id):
 def delete_near_by_place(request,id):
     places = NearByPlace.objects.get(id=id)
     places.delete()
+    messages.success(request,'delete place succefully.')
     return redirect('view_near_by_place')
 
 from django.http import JsonResponse

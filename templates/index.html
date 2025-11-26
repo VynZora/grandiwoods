@@ -126,7 +126,7 @@
   <main class="main">
 
     <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
+    {% comment %} <section id="hero" class="hero section dark-background">
 
       <img src="{% static 'assets/img/hero1.jpg' %}" alt="" data-aos="fade-in">
 
@@ -147,7 +147,265 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section><!-- /Hero Section --> {% endcomment %}
+
+    <!-- HERO CAROUSEL SECTION -->
+<section class="hero-carousel" id="heroCarousel">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide active" style="background-image: url('/static/assets/img/vattavada-home-stay.jpg');">
+    <div class="hero-content">
+      <h1>Grandi Woods</h1>
+      <h2>Cozy Cottages and Homestays in Vattavada</h2>
+      <p>Discover the beauty of Munnar — peaceful views, cool climate and nature at its best.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Read More</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Booking</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide" style="background-image: url('/static/assets/img/vattavada-tent-stay.jpg');">
+    <div class="hero-content">
+      <h1>Wake Up in the Clouds</h1>
+      <h2>Surrounded by Mountains and Peace</h2>
+      <p>Experience nature, silence and serenity like never before.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Explore Stay</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide" style="background-image: url('/static/assets/img/homestays-in-vattavada.jpg');">
+    <div class="hero-content">
+      <h1>Feel the Calmness</h1>
+      <h2>Where Nature Meets Comfort</h2>
+      <p>Perfect weekend escape from stress, noise and routine.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Read More</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="hero-nav">
+    <button id="prevSlide">❮</button>
+    <button id="nextSlide">❯</button>
+  </div>
+
+</section>
+<!-- END HERO CAROUSEL SECTION -->
+
+<style>
+  .hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+  {% comment %} background: rgba(10, 30, 10, 0.65); {% endcomment %}
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 8, 0.68); /* Very dark green overlay */
+  z-index: 1;
+}
+
+.hero-content, .hero-nav button {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 1.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeText 1.2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  opacity: .9;
+}
+
+.hero-content p {
+  margin: 18px 0;
+  font-size: 1.2rem;
+  opacity: .8;
+}
+
+.hero-btns {
+  margin-top: 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 50px !important; /* Fully curved */
+  font-weight: 600;
+  margin: 0 6px;
+  transition: .3s;
+}
+
+
+.hero-btn.primary {
+  background: #477022;
+  color: white;
+}
+
+.hero-btn.secondary {
+  border: 2px solid white;
+  color: white;
+
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-slide {
+  justify-content: flex-start !important;
+}
+
+.hero-content {
+  padding-left: 200px !important; /* Push content more to the right */
+  text-align: left !important;
+}
+
+
+
+@media(max-width: 768px){
+  .hero-content {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+}
+
+
+
+/* Nav */
+.hero-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.hero-nav button {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: rgba(255,255,255,0.68);  /* visible but not too bold */
+  transition: .3s;
+}
+
+.hero-nav button:hover {
+  color: rgba(255,255,255,1); 
+  transform: scale(1.15);
+}
+
+
+@keyframes fadeText {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+
+{% comment %}    my previouse setup>>>>>>>>>>>>.<style>
+  .hero-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.hero-nav button {
+  background: rgba(255,255,255,0.4);
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.hero-nav button:hover {
+  background: rgba(255,255,255,0.8);
+}
+</style> {% endcomment %}
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+document.getElementById('nextSlide').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+document.getElementById('prevSlide').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}, 6000); // Auto change every 6 seconds
+</script>
+
+
 
     <!-- About Section -->
     <section id="about" class="about section">
