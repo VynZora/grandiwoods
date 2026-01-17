@@ -1,0 +1,736 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Grandi woods | Best Homestays in Vattavada | Munnar</title>
+  <meta name="description" content="Discover the beauty of Munnar at Grandiwoods — a peaceful homestay in Vattavada with cozy cottages, mountain views, and relaxing nature experiences.">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MX8W84TS');</script>
+<!-- End Google Tag Manager -->
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    #testimonials .swiper-pagination {
+  position: relative;
+  bottom: 0 !important;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transform: translateX(20px); /* shift right, adjust px as needed */
+}
+@media (max-width: 768px) {
+  #testimonials .swiper-pagination {
+    transform: translateX(15px); /* smaller shift on mobile */
+  }
+}
+
+
+  </style>
+</head>
+
+<body class="index-page">
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8W84TS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@grandywoods.com">info@grandywoods.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 98765 43210</span></i>
+        </div>
+        <div class="languages d-none d-md-flex align-items-center">
+          <ul>
+           
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto me-l-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="{% static 'assets/img/logo1.png' %}" alt=""> -->
+          <h1 class="sitename">Grandi Woods</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="{% url 'index' %}" class="active">Home<br></a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="{% url 'room' %}">Room</a></li>
+            <li><a href="{% url 'near_by_places' %}">Near By Places</a></li>
+             
+            <li><a href="{% url 'gallery' %}">Our Gallery</a></li>
+            <!-- <li><a href="#chefs">Booking</a></li> -->
+            <!-- <li><a href="#gallery">Gallery</a></li> -->
+            <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Dropdown 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Dropdown 1</a></li>
+                    <li><a href="#">Deep Dropdown 2</a></li>
+                    <li><a href="#">Deep Dropdown 3</a></li>
+                    <li><a href="#">Deep Dropdown 4</a></li>
+                    <li><a href="#">Deep Dropdown 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
+              </ul>
+            </li> -->
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-book-a-table d-none d-xl-block" href="{% url 'booking' %}">Booking</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    {% comment %} <section id="hero" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/hero1.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            
+            <h2 data-aos="fade-up" data-aos-delay="100"><span> Grandi Woods </span> – Cozy Cottages and Homestays in Vattavada’s Misty Hills
+ </h2>
+            <p data-aos="fade-up" data-aos-delay="200">Discover the beauty of Munnar at Grandiwoods — a peaceful homestay in Vattavada with cozy cottages, mountain views, and relaxing nature experiences.</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#about" class="cta-btn">Read More</a>
+              <a href="{% url 'booking' %}" class="cta-btn">Booking</a>
+            </div>
+          </div>
+          <!-- <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+          </div> -->
+        </div>
+      </div>
+
+    </section><!-- /Hero Section --> {% endcomment %}
+
+    <!-- HERO CAROUSEL SECTION -->
+<section class="hero-carousel" id="heroCarousel">
+
+  <!-- Slide 1 -->
+  <div class="hero-slide active" style="background-image: url('{% static "assets/img/vattavada.png" %}');">
+    <div class="hero-content">
+      <h1>Grandi Woods</h1>
+      <h2>Cozy Cottages and Homestays in Vattavada</h2>
+      <p>Discover the beauty of Munnar — peaceful views, cool climate and nature at its best.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Read More</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Booking</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide" style="background-image: url('{% static "assets/img/vattavada-home-stay.png" %}');">
+    <div class="hero-content">
+      <h1>Wake Up in the Clouds</h1>
+      <h2>Surrounded by Mountains and Peace</h2>
+      <p>Experience nature, silence and serenity like never before.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Explore Stay</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide" style="background-image: url('{% static "assets/img/vattavada-tent-stay.png" %}');">
+    <div class="hero-content">
+      <h1>Feel the Calmness</h1>
+      <h2>Where Nature Meets Comfort</h2>
+      <p>Perfect weekend escape from stress, noise and routine.</p>
+
+      <div class="hero-btns">
+        <a href="#about" class="hero-btn primary">Read More</a>
+        <a href="{% url 'booking' %}" class="hero-btn secondary">Book Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="hero-nav">
+    <button id="prevSlide">❮</button>
+    <button id="nextSlide">❯</button>
+  </div>
+
+</section>
+<!-- END HERO CAROUSEL SECTION -->
+
+<style>
+  .hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+.hero-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 20, 8, 0.68); /* Very dark green overlay */
+  z-index: 1;
+}
+
+.hero-content, .hero-nav button {
+  position: relative;
+  z-index: 2;
+}
+
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 1s ease, transform 1.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.hero-slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+  animation: fadeText 1.2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  opacity: .9;
+}
+
+.hero-content p {
+  margin: 18px 0;
+  font-size: 1.2rem;
+  opacity: .8;
+}
+
+.hero-btns {
+  margin-top: 20px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 26px;
+  border-radius: 50px !important; /* Fully curved */
+  font-weight: 600;
+  margin: 0 6px;
+  transition: .3s;
+}
+
+
+.hero-btn.primary {
+  background: #477022;
+  color: white;
+}
+
+.hero-btn.secondary {
+  border: 2px solid white;
+  color: white;
+
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+
+.hero-slide {
+  justify-content: flex-start !important;
+}
+
+.hero-content {
+  padding-left: 200px !important; /* Push content more to the right */
+  text-align: left !important;
+}
+
+
+
+@media(max-width: 768px){
+  .hero-content {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+}
+
+
+
+/* Nav */
+.hero-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.hero-nav button {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 25px;
+  color: rgba(255,255,255,0.68);  /* visible but not too bold */
+  transition: .3s;
+}
+
+.hero-nav button:hover {
+  color: rgba(255,255,255,1); 
+  transform: scale(1.15);
+}
+
+
+@keyframes fadeText {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+
+{% comment %}    my previouse setup>>>>>>>>>>>>.<style>
+  .hero-nav {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.hero-nav button {
+  background: rgba(255,255,255,0.4);
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.hero-nav button:hover {
+  background: rgba(255,255,255,0.8);
+}
+</style> {% endcomment %}
+
+<script>
+let currentIndex = 0;
+const slides = document.querySelectorAll('.hero-slide');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+document.getElementById('nextSlide').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+});
+
+document.getElementById('prevSlide').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  showSlide(currentIndex);
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}, 6000); // Auto change every 6 seconds
+</script>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+         <div class="col-lg-6 order-1 order-lg-2">
+  <video class="img-fluid about-img" autoplay muted loop playsinline>
+    <source src="{% static 'assets/videos/vd1.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+       <div class="col-lg-6 order-2 order-lg-1 content">
+  <h3>Welcome to Grandi Woods</h3>
+  <p class="fst-italic">
+    Where comfort meets wilderness in the serene village of Vattavada.
+  </p>
+  <ul>
+    <li><i class="bi bi-check2-all"></i> <span>Thoughtfully designed cottages and a cozy tent stay.</span></li>
+    <li><i class="bi bi-check2-all"></i> <span>Affordable stays with a genuine connection to nature.</span></li>
+    <li><i class="bi bi-check2-all"></i> <span>Misty landscapes, organic local cuisine, and warm hospitality await.</span></li>
+  </ul>
+  <p>
+    Whether you're planning a quiet escape, a romantic weekend, or a family trip to the hills of Munnar, Grandiwoods offers the perfect setting. We believe in slow travel, sustainable living, and meaningful moments — all set against the breathtaking backdrop of Kerala’s high ranges.
+  </p>
+</div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+    <!-- Section Title -->
+<div class="container section-title" data-aos="fade-up">
+  <h2>WHY US</h2>
+  <p>Why Choose Grandi Woods</p>
+</div><!-- End Section Title -->
+
+<div class="container">
+  <div class="row gy-4">
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card-item">
+        <span>01</span>
+        <h4><a href="#" class="stretched-link">Scenic Serenity</a></h4>
+        <p>Located in the heart of Vattavada, Grandiwoods offers breathtaking views of misty mountains and lush greenery — perfect for peace seekers.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card-item">
+        <span>02</span>
+        <h4><a href="#" class="stretched-link">Authentic Experiences</a></h4>
+        <p>Enjoy organic local cuisine, traditional hospitality, and a true connection to nature in our thoughtfully designed cottages and tents.</p>
+      </div>
+    </div><!-- Card Item -->
+
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card-item">
+        <span>03</span>
+        <h4><a href="#" class="stretched-link">Eco-Friendly Stay</a></h4>
+        <p>We believe in slow travel, sustainability, and mindful living — offering you a stay that respects both nature and your comfort.</p>
+      </div>
+    </div><!-- Card Item -->
+
+  </div>
+</div>
+
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+   
+
+    
+
+       <!-- Chefs Section -->
+<section id="client-reviews" class="chefs section">
+ <div class="container section-title" data-aos="fade-up">
+  <h2>Explore the beauty around Grandi Woods</h2>
+  <p>Near By Places</p>
+</div>
+<!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-4">
+      {% for place in places %}
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:1 }}00">
+        <a href="{% url 'nearby_place_detail' place.pk %}" style="text-decoration: none; color: inherit;">
+          <div class="member text-center">
+            {% if place.image %}
+              <img src="{{ place.image.url }}" class="img-fluid mb-3" alt="{{ place.name }}" style="width: 100%; height: 400px; object-fit: cover;">
+            {% else %}
+              <img src="{% static 'assets/img/default-user.png' %}" class="img-fluid rounded-circle mb-3" alt="Default Image" style="width: 120px; height: 120px; object-fit: cover;">
+            {% endif %}
+            <div class="member-info">
+              <div class="member-info-content">
+                <h4>{{ place.name }}</h4>
+                <span>{{ place.description|truncatewords:20|safe }}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+   <!-- Our Guests Section -->
+
+<section id="events" class="events section">
+   <div class="container section-title" data-aos="fade-up">
+     <h2>Our Guests</h2>
+      <p>Memorable moments at Grandi Woods</p>
+</div>
+  
+  <img class="slider-bg" src="{% static 'assets/img/hero3.jpg' %}" alt="" data-aos="fade-in">
+
+  <div class="container">
+ 
+   
+
+    <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+
+      <div class="swiper-wrapper">
+        {% for guest in guests %}
+        <div class="swiper-slide">
+          <img src="{{ guest.image.url }}" class="img-fluid" style="width: 100%; height: 600px; object-fit: cover;" alt="{{ guest.name }}">
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+
+   
+
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>What they're saying about us</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints='{ "320": { "slidesPerView": 1, "spaceBetween": 40 }, "1200": { "slidesPerView": 3, "spaceBetween": 20 } }'>
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 20
+            }
+          }
+        }
+      </script>
+
+      <div class="swiper-wrapper">
+        {% for review in reviews %}
+        <div class="swiper-slide">
+          <div class="testimonial-item text-center">
+            <div class="testimonial-box  rounded text-light position-relative">
+              <i class="bi bi-quote quote-icon-left position-absolute top-0 start-0 ms-3 mt-3 fs-4 text-success"></i>
+              <p class="mb-0 fst-italic">{{ review.review|linebreaks }}</p>
+              <i class="bi bi-quote quote-icon-right position-absolute bottom-0 end-0 me-3 mb-3 fs-4 text-success"></i>
+            </div>
+            {% if review.client_image %}
+              <img src="{{ review.client_image.url }}" class="testimonial-img rounded-circle mt-4 mb-2" alt="{{ review.client_name }}" style="width:90px; height:90px; object-fit:cover;">
+            {% else %}
+              <img src="{% static 'assets/img/default-user.png' %}" class="testimonial-img rounded-circle mt-4 mb-2" alt="Default User" style="width:90px; height:90px; object-fit:cover;">
+            {% endif %}
+            <h3 class="fw-bold mb-0">{{ review.client_name }}</h3>
+            <h4 class="fw-bold small">{{ review.designation }}</h4>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="swiper-pagination mt-4"></div>
+    </div>
+  </div>
+</section>
+
+  
+
+  
+
+   
+
+  </main>
+
+ <footer id="footer" class="footer   py-5">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <!-- Grandi Woods Info -->
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4 class="fw-bold" style="font-size: 30px;">Grandi Woods</h4>
+        <p>
+          Welcome to Grandi Woods – where comfort meets wilderness in the serene village of Vattavada.
+          Enjoy thoughtfully designed cottages and cozy tent stays surrounded by misty landscapes,
+          organic cuisine, and warm hospitality. Slow down, reconnect, and explore Munnar’s high ranges
+          with us.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4 class="fw-bold">Quick Links</h4>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'index' %}" class="  ">Home</a></li>
+          <li><a href="{% url 'about' %}" class="   ">About</a></li>
+          <li><a href="{% url 'near_by_places' %}" class="   ">Nearby Places</a></li>
+          <li><a href="{% url 'contact' %}" class="   ">Contact</a></li>
+          <li><a href="{% url 'booking' %}" class="   ">Booking</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-4 col-md-12 footer-links">
+        <h4 class="fw-bold">Contact</h4>
+        <p>Grandi Woods, Vattavada, Kerala, India</p>
+        <p><strong>Phone:</strong> +91 94467 17955</p>
+        <p><strong>Email:</strong> info@grandywoods.com</p>
+        <div class="social-links mt-3 d-flex gap-3">
+          <a href="#" class=" "><i class="bi bi-facebook"></i></a>
+          <a href="#" class=" "><i class="bi bi-instagram"></i></a>
+          <a href="#" class=" "><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class=" "><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+
+    </div>
+    
+  <div class="text-center mt-4 footer-links">
+  <p class="mb-0">
+    &copy; <span id="currentYear"></span> <strong>Grandi Woods</strong>. All rights reserved.
+  </p>
+  <small>Designed by <a href="https://vynzora.com/">Vynzora</a></small>
+</div>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
+  </div>
+</footer>
+
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+<!-- Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
