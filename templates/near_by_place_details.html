@@ -26,6 +26,13 @@
 
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MX8W84TS');</script>
+<!-- End Google Tag Manager -->
 
   <!-- =======================================================
   * Template Name: Restaurantly
@@ -38,13 +45,17 @@
 
 <body class="index-page">
 
-  <header id="header" class="header fixed-top">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8W84TS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header id="header" class="header fixed-top">
 
     <div class="topbar d-flex align-items-center">
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@grandywoods.com">info@grandywoods.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 98765 43210</span></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 94467 17955</span></i>
         </div>
         <div class="languages d-none d-md-flex align-items-center">
           <ul>
@@ -208,7 +219,7 @@
       <div class="col-lg-4 col-md-12 footer-links">
         <h4 class="fw-bold">Contact</h4>
         <p>Grandi Woods, Vattavada, Kerala, India</p>
-        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Phone:</strong> +91 94467 17955</p>
         <p><strong>Email:</strong> info@grandywoods.com</p>
         <div class="social-links mt-3 d-flex gap-3">
           <a href="#" class=" "><i class="bi bi-facebook"></i></a>
@@ -221,9 +232,15 @@
     </div>
     
     <div class="text-center mt-4 footer-links">
-      <p class="mb-0">&copy; 2025 <strong>Grandi Woods</strong>. All rights reserved.</p>
-      <small class="">Designed by <a href="https://vynzora.com/" class="">Vynzora</a></small>
-    </div>
+  <p class="mb-0">
+    &copy; <span id="currentYear"></span> <strong>Grandi Woods</strong>. All rights reserved.
+  </p>
+  <small>Designed by <a href="https://vynzora.com/">Vynzora</a></small>
+</div>
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
   </div>
 </footer>
 
