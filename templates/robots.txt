@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /logout-user/
+Disallow: /admin/
+
+Sitemap: https://grandiwoods.com/sitemap.xml

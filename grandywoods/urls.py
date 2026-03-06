@@ -17,13 +17,41 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from grandywoods_app.sitemaps import StaticViewSitemap, NearByPlaceSitemap, GuestSitemap
+from django.views.generic import TemplateView
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'places': NearByPlaceSitemap,
+    'guests': GuestSitemap,
+}
+
+
 urlpatterns = [
-    # path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include('grandywoods_app.urls')),
+
+    # Sitemap
+    path(
+        'sitemap.xml',
+        sitemap,
+        {'sitemaps': sitemaps},
+        name='django.contrib.sitemaps.views.sitemap'
+    ),
+
+    # Robots.txt
+    path(
+        'robots.txt',
+        TemplateView.as_view(
+            template_name="robots.txt",
+            content_type="text/plain"
+        )
+    ),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-handler404 = 'grandywoods_app.views.page_404'
+handler404 = 'grandywoods_app.views.page_404'   
