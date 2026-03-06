@@ -27,7 +27,6 @@ from django.conf.urls.static import static
 sitemaps = {
     'static': StaticViewSitemap,
     'places': NearByPlaceSitemap,
-    'guests': GuestSitemap,
 }
 
 

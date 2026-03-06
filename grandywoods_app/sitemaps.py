@@ -35,12 +35,3 @@ class NearByPlaceSitemap(Sitemap):
         return f"/near-by-places/{obj.id}/"
 
 
-class GuestSitemap(Sitemap):
-    changefreq = "monthly"
-    priority = 0.5
-
-    def items(self):
-        return Guest.objects.all()
-
-    def lastmod(self, obj):
-        return obj.created_date
