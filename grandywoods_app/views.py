@@ -3,6 +3,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_protect
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 import random
 
 from .models import ContactModel, NearByPlace, ClientReview, Gallery, Folder, GalleryImage, Booking, RoomPrice, Guest
@@ -59,12 +61,34 @@ def contact(request):
 def booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
+
         if form.is_valid():
-            form.save()
-            messages.success(request, "Booking successful!")  # Show a success message
-            return redirect('booking')  # Reload the same page 
+            booking = form.save()
+
+            # Send Email
+            send_mail(
+                subject='New Booking Received',
+                message=f'''
+
+                Name: {booking.name}
+                Phone: {booking.phone}
+                Email: {booking.email}
+                Arrival Date : {booking.arrival_date}
+                Departure Date : {booking.departure_date}
+                Adults : {booking.adults}
+                Children : {booking.children}
+                ''',
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=['grandiwoodsvattavada@gmail.com'],
+                fail_silently=False,
+            )
+
+            messages.success(request, "Booking successful!")
+            return redirect('booking')
+
         else:
             messages.error(request, "There was an error in your booking.")
+
     else:
         form = BookingForm()
 
